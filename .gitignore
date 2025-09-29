@@ -1,0 +1,7 @@
+config.json
+screenshots/
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.gif
