@@ -1,5 +1,7 @@
 from product import Product
 from product_manager import ProductManager
+from cart import Cart
+import random
 
 def main():
     pm = ProductManager()
@@ -18,3 +20,14 @@ def main():
 
 if __name__ == "__main__":
     main()
+    cart = Cart()
+    if len(pm.products) >= 3:
+        choices = random.sample(pm.products, 3)
+    else:
+        choices = pm.products
+
+    for prod in choices:
+        cart.add_product(prod, qty=1)
+
+    print("\nConținut coș:")
+    cart.display_cart()
